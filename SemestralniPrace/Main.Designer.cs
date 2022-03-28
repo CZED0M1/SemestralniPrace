@@ -75,7 +75,6 @@
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Oddělení";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -94,7 +93,6 @@
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Zákazníci";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // listView2
             // 
@@ -148,6 +146,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Vložit";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.AddOnClick);
             // 
             // button2
             // 
@@ -157,6 +156,7 @@
             this.button2.TabIndex = 11;
             this.button2.Text = "Upravit";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.EditOnClick);
             // 
             // button3
             // 
@@ -166,6 +166,7 @@
             this.button3.TabIndex = 12;
             this.button3.Text = "Odebrat";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.DeleteOnClick);
             // 
             // surrColumn
             // 

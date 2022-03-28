@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SemestralniPrace.Library;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,14 +16,24 @@ namespace SemestralniPrace
         public Main()
         {
             InitializeComponent();
+            comboBox1.DataSource = Enum.GetValues(typeof(EnumCombo.Combo));
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void AddOnClick(object sender, EventArgs e)
         {
+            AddEdit addEdit = new AddEdit();
+            //záleží co se vybere v CB
+            addEdit.Label1Text = "Úprava";
+            addEdit.ShowDialog();
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void EditOnClick(object sender, EventArgs e)
+        {
+            AddEdit addEdit = new AddEdit();
+            addEdit.ShowDialog();
+        }
+
+        private void DeleteOnClick(object sender, EventArgs e)
         {
 
         }
