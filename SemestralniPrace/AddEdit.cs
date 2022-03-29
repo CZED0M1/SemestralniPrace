@@ -1,4 +1,5 @@
-﻿using SemestralniPrace.Library;
+﻿using SemestralniPrace.Entity;
+using SemestralniPrace.Library;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,13 +36,19 @@ namespace SemestralniPrace
         }
         public AddEdit()
         {
-
             InitializeComponent();
+            for (int i = 0; i < Main.oddeleni.Count; i++)
+            {
+                comboBox1.Items.Add(Main.oddeleni[i].Nazev);
+            }
+            comboBox1.SelectedIndex = 0;
         }
 
         private void OkOnClick(object sender, EventArgs e)
         {
-
+            Kniha kn = new Kniha(textNazev.Text, textAutor.Text, textISBN.Text);
+            Main.oddeleni[comboBox1.SelectedIndex].addKniha(kn);
+            Close();
         }
     }
 }

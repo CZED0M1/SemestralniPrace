@@ -28,44 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.LVknihy = new System.Windows.Forms.ListView();
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.LVzakaznici = new System.Windows.Forms.ListView();
+            this.surrColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.idColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.loanColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label4 = new System.Windows.Forms.Label();
-            this.listView4 = new System.Windows.Forms.ListView();
+            this.LVoddeleni = new System.Windows.Forms.ListView();
+            this.nameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.surrColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.loanColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.idColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.nameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView3 = new System.Windows.Forms.ListView();
+            this.LVvypujc = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // listView1
+            // LVknihy
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.LVknihy.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(264, 28);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(252, 464);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.LVknihy.HideSelection = false;
+            this.LVknihy.Location = new System.Drawing.Point(264, 28);
+            this.LVknihy.Name = "LVknihy";
+            this.LVknihy.Size = new System.Drawing.Size(252, 464);
+            this.LVknihy.TabIndex = 0;
+            this.LVknihy.UseCompatibleStateImageBehavior = false;
+            this.LVknihy.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Název";
+            this.columnHeader2.Width = 101;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Autor";
+            this.columnHeader3.Width = 86;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "ISBN";
+            this.columnHeader4.Width = 57;
             // 
             // label1
             // 
@@ -94,19 +109,36 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Zákazníci";
             // 
-            // listView2
+            // LVzakaznici
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.LVzakaznici.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.surrColumn,
             this.idColumn,
             this.loanColumn});
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(522, 28);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(252, 464);
-            this.listView2.TabIndex = 5;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.LVzakaznici.HideSelection = false;
+            this.LVzakaznici.Location = new System.Drawing.Point(522, 28);
+            this.LVzakaznici.Name = "LVzakaznici";
+            this.LVzakaznici.Size = new System.Drawing.Size(252, 464);
+            this.LVzakaznici.TabIndex = 5;
+            this.LVzakaznici.UseCompatibleStateImageBehavior = false;
+            this.LVzakaznici.View = System.Windows.Forms.View.Details;
+            // 
+            // surrColumn
+            // 
+            this.surrColumn.DisplayIndex = 1;
+            this.surrColumn.Text = "Příjmení";
+            this.surrColumn.Width = 148;
+            // 
+            // idColumn
+            // 
+            this.idColumn.DisplayIndex = 0;
+            this.idColumn.Text = "id";
+            this.idColumn.Width = 24;
+            // 
+            // loanColumn
+            // 
+            this.loanColumn.Text = "Výpůjčeno";
+            this.loanColumn.Width = 73;
             // 
             // label4
             // 
@@ -117,18 +149,29 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Vypůjčené knihy";
             // 
-            // listView4
+            // LVoddeleni
             // 
-            this.listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.LVoddeleni.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.nameColumn,
             this.columnHeader1});
-            this.listView4.HideSelection = false;
-            this.listView4.Location = new System.Drawing.Point(6, 28);
-            this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(252, 464);
-            this.listView4.TabIndex = 8;
-            this.listView4.UseCompatibleStateImageBehavior = false;
-            this.listView4.View = System.Windows.Forms.View.Details;
+            this.LVoddeleni.HideSelection = false;
+            this.LVoddeleni.Location = new System.Drawing.Point(6, 28);
+            this.LVoddeleni.Name = "LVoddeleni";
+            this.LVoddeleni.Size = new System.Drawing.Size(252, 464);
+            this.LVoddeleni.TabIndex = 8;
+            this.LVoddeleni.UseCompatibleStateImageBehavior = false;
+            this.LVoddeleni.View = System.Windows.Forms.View.Details;
+            this.LVoddeleni.MouseClick += new System.Windows.Forms.MouseEventHandler(this.oddActive);
+            // 
+            // nameColumn
+            // 
+            this.nameColumn.Text = "Název";
+            this.nameColumn.Width = 170;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Počet knih";
+            this.columnHeader1.Width = 75;
             // 
             // comboBox1
             // 
@@ -168,61 +211,19 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.DeleteOnClick);
             // 
-            // surrColumn
+            // LVvypujc
             // 
-            this.surrColumn.DisplayIndex = 1;
-            this.surrColumn.Text = "Příjmení";
-            this.surrColumn.Width = 148;
-            // 
-            // loanColumn
-            // 
-            this.loanColumn.Text = "Výpůjčeno";
-            this.loanColumn.Width = 73;
-            // 
-            // idColumn
-            // 
-            this.idColumn.DisplayIndex = 0;
-            this.idColumn.Text = "id";
-            this.idColumn.Width = 24;
-            // 
-            // nameColumn
-            // 
-            this.nameColumn.Text = "Název";
-            this.nameColumn.Width = 170;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Počet knih";
-            this.columnHeader1.Width = 75;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Název";
-            this.columnHeader2.Width = 101;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Autor";
-            this.columnHeader3.Width = 86;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "ISBN";
-            this.columnHeader4.Width = 57;
-            // 
-            // listView3
-            // 
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.LVvypujc.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7});
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(780, 28);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(252, 464);
-            this.listView3.TabIndex = 13;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
+            this.LVvypujc.HideSelection = false;
+            this.LVvypujc.Location = new System.Drawing.Point(780, 28);
+            this.LVvypujc.Name = "LVvypujc";
+            this.LVvypujc.Size = new System.Drawing.Size(252, 464);
+            this.LVvypujc.TabIndex = 13;
+            this.LVvypujc.UseCompatibleStateImageBehavior = false;
+            this.LVvypujc.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader5
             // 
@@ -244,18 +245,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1232, 507);
-            this.Controls.Add(this.listView3);
+            this.Controls.Add(this.LVvypujc);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.listView4);
+            this.Controls.Add(this.LVoddeleni);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.LVzakaznici);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.LVknihy);
             this.Name = "Main";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -265,13 +266,13 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView LVknihy;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView LVzakaznici;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListView listView4;
+        private System.Windows.Forms.ListView LVoddeleni;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -284,7 +285,7 @@
         private System.Windows.Forms.ColumnHeader loanColumn;
         private System.Windows.Forms.ColumnHeader nameColumn;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView LVvypujc;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
