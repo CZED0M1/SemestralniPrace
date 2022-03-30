@@ -8,16 +8,14 @@ namespace SemestralniPrace
 {
     public class Zakaznik
     {
-        public static int Pocet=0;
         public int Id { get; set; }
         public string Name { get; set; }
         public int Vypujceno { get => Pujcene.Length; }
         public Kniha[] Pujcene;
 
-        public Zakaznik(string name)
+        public Zakaznik(string name,int id)
         {
-            Id = Pocet;
-            Pocet++;
+            Id = id;
             Name = name;
             Pujcene = new Kniha[0];
         }

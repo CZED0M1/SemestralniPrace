@@ -81,7 +81,7 @@ namespace SemestralniPrace
                 case 2:
                     if (!String.IsNullOrEmpty(textNazev.Text))
                     {
-                        Zakaznik z = new Zakaznik(textNazev.Text);
+                        Zakaznik z = new Zakaznik(textNazev.Text,Main.zakaznici.Count);
                         Main.zakaznici.Add(z);
                         Close();
                     }

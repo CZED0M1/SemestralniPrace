@@ -29,5 +29,21 @@ namespace SemestralniPrace.Library
             Array.Resize(ref oddeleni, Count+1);
             oddeleni[Count-1] = od;
         }
+        public void Remove (int index)
+        {
+            if (index < 0 || index >= Count) return;
+            else
+                oddeleni[index] = null;
+            for (int i = 0; i < Count; i++)
+            {
+                if (i >= index && i < Count - 1)
+                {
+                    Oddeleni temp = oddeleni[i];
+                    oddeleni[i] = oddeleni[i + 1];
+                    oddeleni[i + 1] = temp;
+                }
+            }
+            Array.Resize(ref oddeleni, Count - 1);
+        }
     }
 }

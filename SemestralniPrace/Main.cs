@@ -28,9 +28,9 @@ namespace SemestralniPrace
             od2.addKniha(new Kniha("Babička", "Němcová", "325"));
             od2.addKniha(new Kniha("Fakt nevím", "Random", "7234"));
 
-            Zakaznik z1 = new Zakaznik("Patrik");
-            Zakaznik z2 = new Zakaznik("Adam");
+            Zakaznik z1 = new Zakaznik("Patrik",zakaznici.Count);
             zakaznici.Add(z1);
+            Zakaznik z2 = new Zakaznik("Adam",zakaznici.Count);
             zakaznici.Add(z2);
             oddeleni.Add(od1);
             oddeleni.Add(od2);
@@ -87,6 +87,42 @@ namespace SemestralniPrace
 
         private void DeleteOnClick(object sender, EventArgs e)
         {
+            switch(comboBox1.SelectedIndex)
+            {
+                case 0:
+                    //oddeleni
+                    oddeleni.Remove(LVoddeleni.SelectedItems[0].Index);
+                    LVoddeleni.Items.Clear();
+                    for (int i = 0; i < oddeleni.Count; i++)
+                    {
+                        ListViewItem lvi = new ListViewItem(oddeleni[i].Nazev);
+                        lvi.SubItems.Add(oddeleni[i].Count + "");
+                        LVoddeleni.Items.Add(lvi);
+                    }
+                    LVknihy.Items.Clear();
+                    break;
+                case 1:
+                    //knihy
+                    break;
+                case 2:
+                    //zakaznici
+                    zakaznici.Remove(LVzakaznici.SelectedItems[0].Index);
+                    LVzakaznici.Items.Clear();
+                    for (int i = 0; i < zakaznici.Count; i++)
+                    {
+                        ListViewItem lvi = new ListViewItem(zakaznici[i].Name);
+                        lvi.SubItems.Add(zakaznici[i].Id + "");
+                        lvi.SubItems.Add(zakaznici[i].Vypujceno + "");
+                        LVzakaznici.Items.Add(lvi);
+                    }
+                    break;
+                case 3:
+                    //vypujcky
+                    break;
+                default:
+                    break;
+            }
+           
         }
         private void oddActive(object sender, MouseEventArgs e)
         {

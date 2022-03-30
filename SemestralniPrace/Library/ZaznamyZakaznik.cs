@@ -29,5 +29,21 @@ namespace SemestralniPrace.Library
             Array.Resize(ref zakaznici, Count + 1);
             zakaznici[Count - 1] = zz;
         }
+        public void Remove(int index)
+        {
+            if (index < 0 || index >= Count) return;
+            else
+                zakaznici[index] = null;
+            for (int i = 0; i < Count; i++)
+            {
+                if (i >= index && i < Count - 1)
+                {
+                    Zakaznik temp = zakaznici[i];
+                    zakaznici[i] = zakaznici[i + 1];
+                    zakaznici[i + 1] = temp;
+                }
+            }
+            Array.Resize(ref zakaznici, Count - 1);
+        }
     }
 }
