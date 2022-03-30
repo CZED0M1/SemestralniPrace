@@ -51,6 +51,7 @@
     <Compile Include="Library\Oddeleni.cs" />
     <Compile Include="Library\Kniha.cs" />
     <Compile Include="Library\Zakaznik.cs" />
+    <Compile Include="Library\ZaznamyZakaznik.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

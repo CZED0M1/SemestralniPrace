@@ -15,10 +15,23 @@ namespace SemestralniPrace
     public partial class Main : Form
     {
         public static ZaznamyOddeleni oddeleni = new ZaznamyOddeleni();
+        public static ZaznamyZakaznik zakaznici = new ZaznamyZakaznik();
         public Main()
         {
-            Oddeleni od1 = new Oddeleni("ahoj");
-            Oddeleni od2 = new Oddeleni("čau");
+            Oddeleni od1 = new Oddeleni("A");
+            Oddeleni od2 = new Oddeleni("B");
+            od1.addKniha(new Kniha("RUR", "Čapek", "123"));
+            od1.addKniha(new Kniha("Bílá Nemoc", "Čapek", "25"));
+            od1.addKniha(new Kniha("Válka s mloky", "Čapek", "62362"));
+            od1.addKniha(new Kniha("Nevím", "Čapek", "7237"));
+
+            od2.addKniha(new Kniha("Babička", "Němcová", "325"));
+            od2.addKniha(new Kniha("Fakt nevím", "Random", "7234"));
+
+            Zakaznik z1 = new Zakaznik("Patrik");
+            Zakaznik z2 = new Zakaznik("Adam");
+            zakaznici.Add(z1);
+            zakaznici.Add(z2);
             oddeleni.Add(od1);
             oddeleni.Add(od2);
 
@@ -32,12 +45,19 @@ namespace SemestralniPrace
                 lvi.SubItems.Add(oddeleni[i].Count + "");
                 LVoddeleni.Items.Add(lvi);
             }
+            for (int i = 0; i < zakaznici.Count; i++)
+            {
+                ListViewItem lvi = new ListViewItem(zakaznici[i].Name);
+                lvi.SubItems.Add(zakaznici[i].Id + "");
+                lvi.SubItems.Add(zakaznici[i].Vypujceno + "");
+                LVzakaznici.Items.Add(lvi);
+            }
             comboBox1.DataSource = Enum.GetValues(typeof(EnumCombo.Combo));
         }
         private void AddOnClick(object sender, EventArgs e)
         {
-            AddEdit addEdit = new AddEdit();
-            addEdit.Label1Text = "Úprava";
+            int volba = comboBox1.SelectedIndex;
+            AddEdit addEdit = new AddEdit(volba);
             addEdit.ShowDialog();
             LVoddeleni.Items.Clear();
             for (int i = 0; i < oddeleni.Count; i++)
@@ -46,13 +66,22 @@ namespace SemestralniPrace
                 lvi.SubItems.Add(oddeleni[i].Count + "");
                 LVoddeleni.Items.Add(lvi);
             }
-            
+            LVzakaznici.Items.Clear();
+            for (int i = 0; i < zakaznici.Count; i++)
+            {
+                ListViewItem lvi = new ListViewItem(zakaznici[i].Name);
+                lvi.SubItems.Add(zakaznici[i].Id + "");
+                lvi.SubItems.Add(zakaznici[i].Vypujceno+"");
+                LVzakaznici.Items.Add(lvi);
+            }
+
 
         }
 
         private void EditOnClick(object sender, EventArgs e)
         {
-            AddEdit addEdit = new AddEdit();
+            int volba = comboBox1.SelectedIndex;
+            AddEdit addEdit = new AddEdit(volba);
             addEdit.ShowDialog();
         }
 
