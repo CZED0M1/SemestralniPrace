@@ -12,6 +12,7 @@ namespace SemestralniPrace
         public string Name { get; set; }
         public int Vypujceno { get => Pujcene.Length; }
         public Kniha[] Pujcene;
+        public int Count { get => Pujcene.Length; }
 
         public Zakaznik(string name,int id)
         {
@@ -23,6 +24,21 @@ namespace SemestralniPrace
         {
             Array.Resize(ref Pujcene, Pujcene.Length+1);
             Pujcene[Pujcene.Length-1] = kniha;
+        }
+        public void RemoveVypujcku(Kniha kniha)
+        {
+            int inde = 0;
+            foreach (Kniha item in Pujcene)
+            {
+                while (inde + 1 < Count)
+                {
+                    Pujcene[inde] = Pujcene[inde + 1];
+                    inde++;
+                }
+                Pujcene[Count - 1] = null;
+                Array.Resize(ref Pujcene, Count - 1);
+                break;
+            }
         }
     }
 }

@@ -51,6 +51,10 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LVknihy
@@ -122,6 +126,7 @@
             this.LVzakaznici.TabIndex = 5;
             this.LVzakaznici.UseCompatibleStateImageBehavior = false;
             this.LVzakaznici.View = System.Windows.Forms.View.Details;
+            this.LVzakaznici.MouseClick += new System.Windows.Forms.MouseEventHandler(this.zakActive);
             // 
             // surrColumn
             // 
@@ -240,11 +245,55 @@
             this.columnHeader7.Text = "ISBN";
             this.columnHeader7.Width = 57;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1039, 327);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(187, 23);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "Vypůjči";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.vypujci_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(1039, 356);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(187, 23);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "Vrať";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.vrat_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(1039, 469);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(187, 23);
+            this.button6.TabIndex = 17;
+            this.button6.Text = "Načti";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.nacti_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(1039, 440);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(187, 23);
+            this.button7.TabIndex = 16;
+            this.button7.Text = "Ulož";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.uloz_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1232, 507);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.LVvypujc);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -289,6 +338,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
 

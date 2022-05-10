@@ -34,5 +34,24 @@ namespace SemestralniPrace.Entity
                 knihy[Count - 1] = kniha;
             }
         }
+        public void removeKniha(Kniha kniha)
+        {
+            int inde=0;
+            foreach (var item in knihy)
+            {
+                if (kniha.Equals(item))
+                {
+                    while(inde+1 < Count)
+                    {
+                        knihy[inde] = knihy[inde + 1];
+                        inde++;
+                    }
+                    knihy[Count-1] = null;
+                    Array.Resize(ref knihy, Count - 1);
+                    break;
+                }
+                inde++;
+            }
+        }
     }
 }
